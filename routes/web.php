@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/artistas/{artista}', function ($artista) {
+    $artistas=['Katy perry','Enrique Iglesias','Ariana Grande','Taylor Swift','Shakira','Bruno Mars','Jennifer lopez','Pitbull','Britney Spears']
+    return view('pantalla1',
+    [
+        'artista'=>$artista
+        'artistas'=>$artistas
+    ]
+    );
+});
