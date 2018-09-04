@@ -14,15 +14,17 @@
             <td colspan=2><center><b> @yield('title_table') </b</center></td>
         </tr>
 
-        @foreach($artistas as $dato){
+        @for($i = 0; $i < count($artistas); $i++)
 
 
         <tr>
-            <td><b> {{$Artista}}</b></td>
-            <td> {{$dato}} </td>
+            <td><b> Artista {{$i}}</b></td>
+            <td> {{$artistas[$i]}} </td>
         </tr>
-        }
-        @endforeach
+        
+        @endfor
+        
+
 
         <tr>
             <td colspan=2><center><b> @yield('footer') </b</center></td>
